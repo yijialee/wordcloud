@@ -25,7 +25,7 @@ def get(request):
     print text
     if text == "":
         context = {}
-        response = HttpResponse("{'cuccess':false,'msg':'必须输入参数'}", content_type="application/json; charset=utf-8"  )
+        response = HttpResponse("{'cuccess':false,'msg':'必须输入参数!'}", content_type="application/json; charset=utf-8"  )
         return render(request, 'index.html', context)
 
     img = word.getWordCloud(text)
